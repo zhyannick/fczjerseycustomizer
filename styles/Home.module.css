@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+.main{
+  background-image: url(/background_fcz.jpg);
+  height: 100%;
+  background-repeat: none;
+  background-size: cover;
+  padding-bottom: 7em;
+}
+
+.homepageTitle{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+
+.homepageImg{
+    text-align: center;
+}
+
+.personaliseButton button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius:1rem;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color: white;
+    transition: all 0.2s;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.personaliseButton button:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.personaliseButton{
+    text-align: center;
+  
+}
