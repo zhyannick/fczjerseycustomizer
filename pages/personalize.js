@@ -15,32 +15,32 @@ export default function Personalize(props) {
 
   }
 
-  const [show, setShow] = useState(false)
-  
-  
+
+
+
   const [model, setModel] = useState(defaultModel)
 
-  const [show, setShow] = useState(false)
 
-  const onSubmit = () =>{
-    setShow(true)  
-    
+
+  const onSubmit = () => {
+    console.log(model)
+
   }
 
-  const trueMaker = () =>{
-    if (model.signed === false){
+  const trueMaker = () => {
+    if (model.signed === false) {
       model.signed = true
     }
   }
 
-  const handleChange = async (e) =>{
+  const handleChange = async (e) => {
     const name = e.target.name
     const value = e.target.value?.trim()
 
     setModel({
       ...model,
       [name]: value
-  })
+    })
 
   }
   const sizes = [
@@ -48,97 +48,96 @@ export default function Personalize(props) {
     { label: 'M' },
     { label: 'L' },
     { label: 'XL' }
-   
+
 
   ];
 
   const awnser = [
-    { label: 'Yes'},
-    { label: 'No'}
+    { label: 'Yes' },
+    { label: 'No' }
   ];
 
-  
-    return (
-      <div>
-          <div className={styles.title}>
-          <h1>
-              Personalize your Jersey
-          </h1>
 
-          </div>
-          <div>
-          <form onSubmit={onSubmit}>
-       
+  return (
+    <div>
+      <div className={styles.title}>
+        <h1>
+          Personalize your Jersey
+        </h1>
+
+      </div>
+      <div>
+        <form onSubmit={onSubmit}>
+
           <h1>Personalize</h1>
 
           <div>
-          <label htmlFor="name">Name</label>
-            <input type="text" name="name" onChange={handleChange} value={model.name} />    
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" onChange={handleChange} value={model.name} />
 
           </div>
           <div>
-          <label htmlFor="number">Number</label>
-            <input type="number" name="number" onChange={handleChange} value={model.number}/>
+            <label htmlFor="number">Number</label>
+            <input type="number" name="number" onChange={handleChange} value={model.number} />
           </div>
 
           <div>
-          
-          <Autocomplete
-      onChange={(event, value) => setModel({
-        ...model,
-        signed: value.label
-      })}
-      
-      disablePortal
-      id="combo-box-demo"
-      options={awnser}
-      sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Signed" />}
-    />
-  
-          </div> 
-          
+
+            <Autocomplete
+              onChange={(event, value) => setModel({
+                ...model,
+                signed: value.label
+              })}
+
+              disablePortal
+              id="combo-box-demo"
+              options={awnser}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Signed" />}
+            />
+
+          </div>
+
           <div>
 
-          <Autocomplete
-      onChange={(event, value) => setModel({
-        ...model,
-        size:  value.label
-      })}
-      
-      disablePortal
-      id="combo-box-demo"
-      options={sizes}
-      sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Size" />}
-    />
-          </div>
-          
+            <Autocomplete
+              onChange={(event, value) => setModel({
+                ...model,
+                size: value.label
+              })}
 
-        <input type='submit' value='Enter'/>
+              disablePortal
+              id="combo-box-demo"
+              options={sizes}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Size" />}
+            />
+          </div>
+
+
+          <input type='submit' value='Enter' />
 
         </form>
 
-          </div>
-          
-          <div>
+      </div>
+
+      <div>
         <p>Name: {model.name}</p>
-          <p>Number: {model.number}</p>
-          <p>signed: {model.signed}</p>
-          <p>Size: {model.size}</p>
+        <p>Number: {model.number}</p>
+        <p>signed: {model.signed}</p>
+        <p>Size: {model.size}</p>
 
       </div>
-    
 
-        
-       
-        
-      </div>
-  
-  
-  
 
-  
-    )
-  }
-  
+
+
+
+    </div>
+
+
+
+
+
+  )
+}
