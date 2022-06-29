@@ -15,17 +15,12 @@ export default function Personalize(props) {
 
   }
 
-  const [show, setShow] = useState(false)
+ 
   
   
   const [model, setModel] = useState(defaultModel)
 
-  const [show, setShow] = useState(false)
 
-  const onSubmit = () =>{
-    setShow(true)  
-    
-  }
 
   const trueMaker = () =>{
     if (model.signed === false){
