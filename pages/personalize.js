@@ -11,30 +11,12 @@ export default function Personalize(props) {
     number: "",
     signed: "",
     size: "",
-
-
   }
 
-<<<<<<< HEAD
-
-
-
   const [model, setModel] = useState(defaultModel)
-
-
-
   const onSubmit = () => {
     console.log(model)
-
   }
-=======
- 
-  
-  
-  const [model, setModel] = useState(defaultModel)
-
-
->>>>>>> f62df58e9a6773260e7ed3582910614a8337c073
 
   const trueMaker = () => {
     if (model.signed === false) {
@@ -57,8 +39,6 @@ export default function Personalize(props) {
     { label: 'M' },
     { label: 'L' },
     { label: 'XL' }
-
-
   ];
 
   const awnser = [
@@ -66,55 +46,48 @@ export default function Personalize(props) {
     { label: 'No' }
   ];
 
-
   return (
-    <div>
+    <div className={styles.background}>
+    <div className={styles.positioning}>
       <div className={styles.title}>
-        <h1>
+        <h1 className={styles.PersonalizeYourJersey}>
           Personalize your Jersey
         </h1>
-
       </div>
       <div>
         <form onSubmit={onSubmit}>
-
-          <h1>Personalize</h1>
-
+          <h1 className={styles.personalilze_title}>
+            Personalize:
+          </h1>
           <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" onChange={handleChange} value={model.name} />
-
+            <p className={styles.label}>Name:</p>
+            <input type="text" name="name" onChange={handleChange} value={model.name} className={styles.input} />
           </div>
           <div>
-            <label htmlFor="number">Number</label>
-            <input type="number" name="number" onChange={handleChange} value={model.number} />
+            <p className={styles.label}>Number:</p>
+            <input type="number" name="number" onChange={handleChange} value={model.number} className={styles.input2} />
           </div>
-
-          <div>
-
+          <div className={styles.center_Autocomplete}>
             <Autocomplete
+              className={styles.inputFont}
               onChange={(event, value) => setModel({
                 ...model,
                 signed: value.label
               })}
-
               disablePortal
               id="combo-box-demo"
               options={awnser}
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Signed" />}
             />
-
           </div>
-
-          <div>
-
+          <div className={styles.center_Autocomplete2}>
             <Autocomplete
+             className={styles.inputFont}
               onChange={(event, value) => setModel({
                 ...model,
                 size: value.label
               })}
-
               disablePortal
               id="combo-box-demo"
               options={sizes}
@@ -122,31 +95,17 @@ export default function Personalize(props) {
               renderInput={(params) => <TextField {...params} label="Size" />}
             />
           </div>
-
-
-          <input type='submit' value='Enter' />
-
+{/*           <input type='submit' value='Enter' className={styles.EnterButton}/> */}
         </form>
-
       </div>
-
       <div>
-        <p>Name: {model.name}</p>
-        <p>Number: {model.number}</p>
-        <p>signed: {model.signed}</p>
-        <p>Size: {model.size}</p>
-
+        <h1 className={styles.PersonalizeYourJersey}>Result:</h1>
+        <p className={styles.label2}>Name: {model.name}</p>
+        <p className={styles.label2}>Number: {model.number}</p>
+        <p className={styles.label2}>Signed: {model.signed}</p>
+        <p className={styles.label2}>Size: {model.size}</p>
       </div>
-
-
-
-
-
     </div>
-
-
-
-
-
+    </div>
   )
 }

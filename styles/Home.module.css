@@ -6,13 +6,17 @@
   height: 100%;
   background-repeat: none;
   background-size: cover;
-  padding-bottom: 7em;
+  padding-bottom: 15rem;
+}
+
+.homepageTitle2{
+    margin: 0;
 }
 
 .homepageTitle{
+    margin: 0;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 4rem;
     font-size: 3rem;
     color: rgb(255, 255, 255);
 }
@@ -21,7 +25,7 @@
     text-align: center;
 }
 
-.personaliseButton button{
+.personaliseButton button{  
     display:inline-block;
     padding:0.35em 1.2em;
     border:0.1em solid #ffffff;
@@ -44,5 +48,5 @@
 
 .personaliseButton{
     text-align: center;
-  
+    margin-top: 3rem;
 }

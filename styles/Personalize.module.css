@@ -1,3 +1,84 @@
-.title{
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.background{
+    background-image: url(/background_fcz.jpg);
+    height: 100%;
+    background-repeat: none;
+    background-size: cover;
+    padding-bottom: 7em;
+}
+
+.title {
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+.personalilze_title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.positioning {
+    text-align: center;
+}
+
+.center_Autocomplete {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.center_Autocomplete2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.input {
+    height: 3.5rem;
+    width: 18.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+
+.input2 {
+    height: 3.5rem;
+    width: 18.5rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+
+.label {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.label2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.inputFont{
+    background-color: white;
+    border-radius: 5rem;
+}
+
+.PersonalizeYourJersey{
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 1rem;
+    color: white;
+    margin-top: 0;
+}
+
+.EnterButton{
+    margin-bottom: 1rem;
 }
