@@ -67,12 +67,10 @@ export default function Personalize(props) {
             Personalize:
           </h1>
           <div>
-            <p className={styles.label}>Name:</p>
-            <input type="text" name="name" onChange={handleChange} value={model.name} className={styles.input} />
+            <input placeholder='Name' type="text" name="name" onChange={handleChange} value={model.name} className={styles.input} />
           </div>
           <div>
-            <p className={styles.label}>Number:</p>
-            <input type="number" name="number" onChange={handleChange} value={model.number} className={styles.input2} />
+            <input placeholder='Number' type="number" name="number" onChange={handleChange} value={model.number} className={styles.input2} />
           </div>
           <div className={styles.center_Autocomplete}>
             <Autocomplete
