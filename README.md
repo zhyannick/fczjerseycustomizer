@@ -44,6 +44,8 @@ Auf der Hauptseite gibt es einen Titel und darunter die verschiedenen Inputfelde
 welche die Eingabe der Inputfelder den Variabeln aus dem Model zuweist. Dafür haben wir die useState() Funktion verwendet. Durch diese kann man die Werte ganz einfach anzeigen lassen.
 Da wir auch Inputfelder haben, welche eine Auswahl von Antworten bereitstellt, haben wir ein MUI Autocomplete component verwendet. 
 
+![Image](/public/screenshot.png)
+
 # Kontrollieren
 
 # Auswerten
