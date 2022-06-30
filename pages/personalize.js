@@ -15,6 +15,7 @@ export default function Personalize(props) {
 
   }
 
+<<<<<<< HEAD
 
 
 
@@ -26,6 +27,14 @@ export default function Personalize(props) {
     console.log(model)
 
   }
+=======
+ 
+  
+  
+  const [model, setModel] = useState(defaultModel)
+
+
+>>>>>>> f62df58e9a6773260e7ed3582910614a8337c073
 
   const trueMaker = () => {
     if (model.signed === false) {
