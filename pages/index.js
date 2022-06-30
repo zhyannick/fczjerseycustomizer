@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.main}>
       <img src="/background_fcz"/>
     <div className={styles.homepageTitle}>
-        <h1>FCZ Jersey Designer</h1>
+        <h1 className={styles.StartPageTitle}>FCZ Jersey Designer</h1>
     </div>
     <div className={styles.homepageImg}>
         <img src="/fczlogo.png"/>

@@ -9,6 +9,10 @@
   padding-bottom: 15rem;
 }
 
+.StartPageTitle{
+    margin-bottom: 0;
+}
+
 .homepageTitle2{
     margin: 0;
 }
@@ -48,5 +52,5 @@
 
 .personaliseButton{
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
