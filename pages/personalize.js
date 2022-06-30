@@ -11,6 +11,7 @@ export default function Personalize(props) {
     number: "",
     signed: "",
     size: "",
+    location: ""
   }
 
   const [model, setModel] = useState(defaultModel)
@@ -45,6 +46,12 @@ export default function Personalize(props) {
     { label: 'Yes' },
     { label: 'No' }
   ];
+
+  const locations = [
+    { label: 'Home'},
+    { label: 'Away'},
+
+  ]
 
   return (
     <div className={styles.background}>
@@ -94,16 +101,32 @@ export default function Personalize(props) {
               sx={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="Size" />}
             />
+            
+          </div>
+          <div className={styles.center_Autocomplete2}>
+          <Autocomplete
+             className={styles.inputFont}
+              onChange={(event, value) => setModel({
+                ...model,
+                location: value.label
+              })}
+              disablePortal
+              id="combo-box-demo"
+              options={locations}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Home/Away" />}
+            />
           </div>
 {/*           <input type='submit' value='Enter' className={styles.EnterButton}/> */}
         </form>
       </div>
       <div>
-        <h1 className={styles.PersonalizeYourJersey}>Result:</h1>
+        <h1 className={styles.PersonalizeYourJersey}>Results:</h1>
         <p className={styles.label2}>Name: {model.name}</p>
         <p className={styles.label2}>Number: {model.number}</p>
         <p className={styles.label2}>Signed: {model.signed}</p>
         <p className={styles.label2}>Size: {model.size}</p>
+        <p className={styles.label2}>Home/Away: {model.location}</p>
       </div>
     </div>
     </div>
