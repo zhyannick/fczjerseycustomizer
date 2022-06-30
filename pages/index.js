@@ -17,10 +17,10 @@ export default function Home() {
         <Link href="/personalize"><a>
             <button>Personalise</button>
         </a></Link>
+        <Link href="/TrikotTrailer"><a>
+            <button>Trikot Trailer</button>
+        </a></Link>
     </div>
-
-
-
 </div>
 
   )
